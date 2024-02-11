@@ -32,9 +32,21 @@ h4 {
 img {
   display: block;
 }
-
+/* For viewport widths 960px and below */
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
+  }
+  img {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* For viewport widths 960px and above */
+@media (min-width: 960px) {
+  img {
+    width: 50%; /* Display the image at half the viewport width */
+    height: auto; /* Maintain aspect ratio */
   }
 }
